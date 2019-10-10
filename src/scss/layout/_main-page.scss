@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    min-height: 100vh;
+}
+
+body {
+    background: radial-gradient($color-primary-light, $color-primary);
+    padding: 2rem;
+}
+
+.game__info {
+    display: flex;
+    justify-content: space-around;
+}
