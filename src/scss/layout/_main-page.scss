@@ -10,10 +10,62 @@ html {
 
 body {
     background: radial-gradient($color-primary-light, $color-primary);
-    padding: 2rem;
+    padding: $space-s;
 }
 
 .game__info {
+    grid-column: 1/-1;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin-bottom: $space-s;
 }
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: $space-s/2;
+    justify-content: center;
+    margin: $space-s;
+    perspective: 600px;
+}
+
+.card {
+    width: 6.5rem;
+    height: 8.5rem;
+    border: 5px solid $color-secondary;
+    border-radius: 8px;
+    position: relative;
+    transition: .8s;
+    transform-style: preserve-3d;
+    
+    img {
+        width: 100%;
+    }
+}
+
+.card__face {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.card__front {
+    background-color:$color-white;
+    transform: rotateY(180deg);
+    
+}
+
+.card__back {
+    background-color: $color-secondary;
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+}
+
+
+
+
+
