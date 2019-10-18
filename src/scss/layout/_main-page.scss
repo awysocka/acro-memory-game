@@ -65,6 +65,44 @@ body {
     transform: rotateY(180deg);
 }
 
+.overlay__text {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    font-weight: 700;
+    font-family: $font-family-titles;
+    color: $color-white;
+}
+
+.overlay__text.visible {
+    display: flex;
+    flex-direction: column;
+    animation: overlayGrow 500ms forwards;
+}
+
+@keyframes overlayGrow {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+        font-size: 0;
+    }
+
+    to {
+        background-color: rgba(0, 0, 0, .8);
+        font-size: $font-size-m*3;
+    }
+}
+
+.overlay__text--small {
+    font-size: $font-size-m;
+    
+}
+
 
 
 
