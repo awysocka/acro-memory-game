@@ -14,13 +14,13 @@
   </head>
   <body>
     <h1 class="heading__first">Acro Memory</h1>
-    <div class="overlay__text">Click to start</div>
+    <div class="overlay__text visible">Click to start</div>
     <div id="game-over-text" class="overlay__text">Game Over<span class="overlay__text--small">Click to restart</span></div>
     <div id="victory-text" class="overlay__text">Victory<span class="overlay__text--small">Click to restart</span></div>
     <div class="game">
       <div class="game__info">
-        <p class="game__time">Time<span> 100</span></p>
-        <p class="game__flips">Flips<span> 0</span></p>
+        <p class="game__time">Time<span id="time--counter"> 30</span></p>
+        <p class="game__flips">Flips<span id="flips--counter"> 0</span></p>
       </div>
       <div class="card">
         <div class="card__face card__back">
